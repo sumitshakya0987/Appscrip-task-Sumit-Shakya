@@ -1,0 +1,82 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0; /* CRITICAL FIX: Allows CSS grid to shrink children instead of overflowing */
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: #f7f7f7;
+  overflow: hidden;
+  margin-bottom: 15px;
+  min-width: 0;
+}
+
+/* Removed hover scale to prevent unintended focus trigger glitches */
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #252020;
+  flex: 1; /* allow it to take available space */
+  min-width: 0; /* CRITICAL FIX: Forces text-overflow ellipsis to trigger instead of pushing grid */
+}
+
+.likeBtn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #252020;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.likeBtn:hover {
+  transform: scale(1.1);
+}
+
+.liked {
+  color: #eb4c6b;
+}
+
+.priceRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginText {
+  font-size: 12px;
+  color: #888792;
+  line-height: 1.4;
+}
+
+.loginText a {
+  text-decoration: underline;
+  color: #252020;
+}

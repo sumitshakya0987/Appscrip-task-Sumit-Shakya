@@ -1,0 +1,93 @@
+.sidebar {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.customizableToggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+}
+
+.checkboxToggle {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.section {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.chevron {
+  font-size: 12px;
+  color: var(--foreground);
+}
+
+.content {
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.unselectAll {
+  font-size: 12px;
+  text-decoration: underline;
+  color: var(--text-muted);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+  accent-color: var(--primary);
+}
+
+.checkboxText {
+  font-size: 14px;
+  color: var(--foreground);
+}

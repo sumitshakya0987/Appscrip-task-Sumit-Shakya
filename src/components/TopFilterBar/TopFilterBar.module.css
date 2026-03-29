@@ -1,0 +1,109 @@
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 30px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.itemCount {
+  font-weight: 700;
+  font-size: 16px;
+  color: #252020;
+}
+
+.toggleFilterDesktop {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #888792;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.toggleFilterDesktop:hover {
+  color: #252020;
+}
+
+.chevron {
+  font-size: 10px;
+}
+
+.toggleText {
+  text-decoration: underline;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.sortDropdown,
+.mobileSortDropdown {
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: #252020;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.mobileToolbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .left, .right {
+    display: none; /* Hide desktop specific elements */
+  }
+  
+  .mobileToolbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .mobileFilterBtn {
+    flex: 1;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 18px 8px;
+    cursor: pointer;
+    color: #252020;
+    text-transform: uppercase;
+  }
+  
+  .mobileDivider {
+    width: 1px;
+    height: 20px;
+    background-color: var(--border-light);
+  }
+  
+  .mobileSortDropdown {
+    flex: 1;
+    text-align: center;
+    text-align-last: center; /* Center the select text */
+    padding: 18px 8px;
+    /* Appends chevron automatically in most browsers, but we keep it clean */
+  }
+}

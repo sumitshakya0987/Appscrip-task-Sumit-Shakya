@@ -1,0 +1,150 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--background);
+}
+
+.topBanner {
+  background-color: #000;
+  color: #eb4c6b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.bannerItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navContainer {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.leftMobile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--foreground);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.desktopNav {
+  display: flex;
+  gap: 32px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.desktopNav a {
+  transition: color 0.2s ease;
+}
+
+.desktopNav a:hover {
+  color: var(--primary);
+}
+
+.closeBtn {
+  display: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--foreground);
+  transition: color 0.2s ease;
+}
+
+.iconBtn:hover {
+  color: var(--primary);
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 10px;
+}
+
+.desktopOnly {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none !important;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+
+  /* Mobile slide-in menu */
+  .desktopNav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100vh;
+    background: var(--background);
+    flex-direction: column;
+    padding: 60px 20px 20px;
+    gap: 24px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .desktopNav.mobileNavOpen {
+    left: 0;
+  }
+
+  .closeBtn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
