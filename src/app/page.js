@@ -10,42 +10,42 @@ const FALLBACK_PRODUCTS = [
     title: "Fjallraven - Foldsack No. 1 Backpack",
     price: 109.95,
     description: "Your perfect pack for everyday use.",
-    image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    image: "/fallback/1.jpg",
   },
   {
     id: 2,
     title: "Mens Casual Premium Slim Fit T-Shirts",
     price: 22.3,
     description: "Slim-fitting style, contrast raglan long sleeve.",
-    image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    image: "/fallback/2.jpg",
   },
   {
     id: 3,
     title: "Mens Cotton Jacket",
     price: 55.99,
     description: "Great outerwear jackets for Spring/Autumn/Winter.",
-    image: "https://fakestoreapi.com/img/71li-ujtlVG._AC_UX679_.jpg",
+    image: "/fallback/3.jpg",
   },
   {
     id: 4,
     title: "John Hardy Women's Legends Naga Gold",
     price: 695,
     description: "From our Legends Collection, the Naga was inspired by the mythical water dragon.",
-    image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+    image: "/fallback/4.jpg",
   },
   {
     id: 5,
     title: "Solid Gold Petite Micropave",
     price: 168,
     description: "Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-    image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+    image: "/fallback/5.jpg",
   },
   {
     id: 6,
     title: "White Gold Plated Princess",
     price: 9.99,
     description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring.",
-    image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+    image: "/fallback/6.jpg",
   }
 ];
 
