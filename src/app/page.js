@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Header from "@/components/Header/Header";
+export const dynamic = 'force-dynamic';
 import Footer from "@/components/Footer/Footer";
 import Catalog from "@/components/Catalog/Catalog";
 
@@ -60,6 +61,9 @@ export default async function Home() {
       products = FALLBACK_PRODUCTS;
     }
   } catch (error) {
+    if (error.digest === 'DYNAMIC_SERVER_USAGE') {
+      throw error;
+    }
     console.error("Failed to fetch products via SSR:", error);
     products = FALLBACK_PRODUCTS;
   }
