@@ -1,5 +1,4 @@
 import fs from 'fs';
-import https from 'https';
 
 const images = [
   "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
@@ -15,16 +14,26 @@ if (!fs.existsSync(dir)){
     fs.mkdirSync(dir, { recursive: true });
 }
 
-images.forEach((url, i) => {
-  const file = fs.createWriteStream(`${dir}/${i + 1}.jpg`);
-  https.get(url, function(response) {
-    response.pipe(file);
-    file.on('finish', () => {
-      file.close();
-      console.log(`Downloaded: ${i + 1}.jpg`);
-    });
-  }).on('error', (err) => {
-    fs.unlink(`${dir}/${i + 1}.jpg`, () => {});
-    console.error(`Error downloading ${url}: ${err.message}`);
-  });
-});
+async function run() {
+  for (let i = 0; i < images.length; i++) {
+    const url = images[i];
+    try {
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.9',
+          'Referer': 'https://fakestoreapi.com/'
+        }
+      });
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      fs.writeFileSync(`${dir}/${i + 1}.jpg`, buffer);
+      console.log(`Downloaded ${i + 1}.jpg: ${buffer.length} bytes`);
+    } catch (e) {
+      console.error(`Failed ${url}: ${e}`);
+    }
+  }
+}
+run();

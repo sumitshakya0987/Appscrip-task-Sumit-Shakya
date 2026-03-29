@@ -10,42 +10,42 @@ const FALLBACK_PRODUCTS = [
     title: "Fjallraven - Foldsack No. 1 Backpack",
     price: 109.95,
     description: "Your perfect pack for everyday use.",
-    image: "/fallback/1.jpg",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: 2,
     title: "Mens Casual Premium Slim Fit T-Shirts",
     price: 22.3,
     description: "Slim-fitting style, contrast raglan long sleeve.",
-    image: "/fallback/2.jpg",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: 3,
     title: "Mens Cotton Jacket",
     price: 55.99,
     description: "Great outerwear jackets for Spring/Autumn/Winter.",
-    image: "/fallback/3.jpg",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: 4,
     title: "John Hardy Women's Legends Naga Gold",
     price: 695,
     description: "From our Legends Collection, the Naga was inspired by the mythical water dragon.",
-    image: "/fallback/4.jpg",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: 5,
     title: "Solid Gold Petite Micropave",
     price: 168,
     description: "Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-    image: "/fallback/5.jpg",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=400&q=80",
   },
   {
     id: 6,
     title: "White Gold Plated Princess",
     price: 9.99,
     description: "Classic Created Wedding Engagement Solitaire Diamond Promise Ring.",
-    image: "/fallback/6.jpg",
+    image: "https://images.unsplash.com/photo-1605100804763-247f66126e28?auto=format&fit=crop&w=400&q=80",
   }
 ];
 

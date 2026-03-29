@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
       <div className={styles.imageContainer}>
         
         <img 
-          src={product.image ? (product.image.startsWith('/') ? product.image : `https://wsrv.nl/?url=${encodeURIComponent(product.image)}&w=400&q=75&output=webp`) : '/placeholder.jpg'} 
+          src={product.image || '/placeholder.jpg'} 
           alt={`Image of ${product.title}`} 
           referrerPolicy="no-referrer"
           style={{ 
