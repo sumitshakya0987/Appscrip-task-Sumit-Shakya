@@ -13,6 +13,7 @@ const ProductCard = ({ product }) => {
           alt={`Image of ${product.title}`} 
           fill
           unoptimized={true}
+          referrerPolicy="no-referrer"
           style={{ objectFit: 'contain', padding: '24px' }}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={styles.image}
