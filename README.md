@@ -12,7 +12,7 @@ A responsive Product Listing Page (PLP) built to strictly match provided Figma d
 
 1. **Clone the repository:**
 ```bash
-git clone <repository_url>
+git clone <https://github.com/sumitshakya0987/Appscrip-task-Sumit-Shakya>
 cd Appscrip-task-Sumit_Shakya
 ```
 
