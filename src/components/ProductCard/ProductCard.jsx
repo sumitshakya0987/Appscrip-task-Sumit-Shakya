@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import styles from './ProductCard.module.css';
 import React, { useState } from 'react';
+import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
   const [isLiked, setIsLiked] = useState(false);
@@ -8,14 +7,19 @@ const ProductCard = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <Image 
+        <img 
           src={product.image || '/placeholder.jpg'} 
           alt={`Image of ${product.title}`} 
-          fill
-          unoptimized={true}
           referrerPolicy="no-referrer"
-          style={{ objectFit: 'contain', padding: '24px' }}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ 
+            objectFit: 'contain', 
+            padding: '24px', 
+            width: '100%', 
+            height: '100%', 
+            position: 'absolute', 
+            top: 0, 
+            left: 0 
+          }}
           className={styles.image}
         />
       </div>
